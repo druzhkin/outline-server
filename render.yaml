@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: outline-vpn
+    env: docker
+    dockerfilePath: docker/Dockerfile
+    plan: free
+    autoDeploy: true
+    healthCheckPath: /
+    envVars:
+      - key: TZ
+        value: UTC
